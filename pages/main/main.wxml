@@ -1,0 +1,35 @@
+<view class='cont'>
+
+<!-- 今日天气-->
+
+<view class='today'>
+
+<view class='info'>
+
+<view class='tempe'>{{today.wendu}}°C</view>
+
+<view class='weather'>{{today.todayInfo.type}}{{today.todayInfo.fengxiang}}</view>
+
+<view>温馨提示：{{today.ganmao}}</view>
+
+<view class='city'>{{city}}</view>
+
+</view>
+
+</view>
+
+<!-- 未来天气-->
+
+<import src="../template/itemtpl"/>
+
+<view class='future'>
+
+<block wx:for="{{future}}">
+
+<template is="future-item" data="{{item}}"/>
+
+</block>
+
+</view>
+
+</view>
