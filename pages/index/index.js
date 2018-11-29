@@ -50,5 +50,10 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  open_map:function(e){
+    wx.navigateTo({
+      url: '../addr/addr',
+     })
   }
 })

@@ -1,35 +1,32 @@
 <view class='cont'>
+  <!-- 今日天气-->
+  <view class='today'>
+    <view class='info'>
+      <view class='flex-wrp' style="flex-direction:row;">
+        <view class='flex-item tempe'>
+          {{today.wendu}}°C
+        </view>
+        <view class='text_loc'><text bindtap='loadInfo'>当前位置</text></view>
+    </view>
+    <view class='weather'>{{today.todayInfo.type}}{{today.todayInfo.fengxiang}}</view>
+    <view>温馨提示：{{today.ganmao}}</view>
+      <view class='city'>
+        <picker mode="region" bindchange="bindRegionChange" value='{{region}}'>
+          <view>
+            {{city}},{{district}}
+          </view>
+        </picker> 
+      </view>
+    </view>
+  </view>
 
-<!-- 今日天气-->
-
-<view class='today'>
-
-<view class='info'>
-
-<view class='tempe'>{{today.wendu}}°C</view>
-
-<view class='weather'>{{today.todayInfo.type}}{{today.todayInfo.fengxiang}}</view>
-
-<view>温馨提示：{{today.ganmao}}</view>
-
-<view class='city'>{{city}}</view>
-
-</view>
-
-</view>
-
-<!-- 未来天气-->
-
-<import src="../template/itemtpl"/>
-
-<view class='future'>
-
-<block wx:for="{{future}}">
-
-<template is="future-item" data="{{item}}"/>
-
-</block>
-
-</view>
-
+  <!-- 未来天气-->
+  <import src="../template/itemtpl"/>
+  <view class='future'>
+    <block wx:for="{{future}}">
+    <template is="future-item" data="{{item}}"/>
+    </block>
+  </view>
+  <!-- <view class='city'>
+  </view> -->
 </view>
