@@ -3,7 +3,6 @@ Page({
     data: {
         
     },
-    
     //options(Object)
     onLoad: function(options){
       wx.getLocation({
@@ -32,7 +31,7 @@ Page({
 
     },
     onPullDownRefresh: function(){
-
+        
     },
     onReachBottom: function(){
 
