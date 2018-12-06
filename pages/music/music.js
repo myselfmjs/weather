@@ -77,8 +77,11 @@ Page({
    //获取歌曲链接并跳转
     util.getMusicKey(songmid,function(data){
       wx.navigateTo({
-        url: '../audio/audio?purl=' + encodeURIComponent(data.purl) + '&songname=' + songname + '&author=' + author + '&albummid=' + albummid,
+        url: '../innerAudio/innerAudio',
       })
+      // wx.navigateTo({
+      //   url: '../audio/audio?purl=' + encodeURIComponent(data.purl) + '&songname=' + songname + '&author=' + author + '&albummid=' + albummid,
+      // })
     })
   }
 })

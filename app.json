@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/innerAudio/innerAudio",
     "pages/music/music",
     "pages/index/index",
     "pages/main/main",
@@ -7,8 +8,8 @@
     "pages/logs/logs",
     "pages/mine/mine",
     "pages/image/image",
-    
     "pages/audio/audio"
+    
   ],
   "window": {
     "backgroundTextStyle": "dark",
