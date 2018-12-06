@@ -37,5 +37,7 @@ App({
   globalData: {
     userInfo: null
   },
-  
+  d:{
+    hostUrl:'http://localhost:8080'
+  }
 })

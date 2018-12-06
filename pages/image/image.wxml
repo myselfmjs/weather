@@ -1,0 +1,19 @@
+<!--pages/image/image.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <text class="page__title">image</text>
+    <text class="page__desc">图片</text>
+    <view>{{json}}</view>
+  </view>
+  <scroll-view scroll-y="true" bindscrolltolower="searchScrollLower">
+    <view class="page__bd">
+      <view class="section section_gap" wx:for="{{array}}" wx:for-item="item">
+        <view class="section__title">{{item.text}}</view>
+        <view class="flex-wrp">
+          <view><image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{src}}"></image></view>
+          <text>{{item.text}}</text>
+        </view>
+      </view>
+    </view>
+   </scroll-view>
+</view>

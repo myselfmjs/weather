@@ -47,7 +47,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-   
+    //wx.startPullDownRefresh(), //触发下拉刷新 //开启后无限循环
     wx.showModal({
       title:'提示',
       content: '确认刷新？',
@@ -66,8 +66,10 @@ Page({
           })
         }
         wx.hideNavigationBarLoading() //在标题栏中隐藏加载
+        wx.stopPullDownRefresh() //停止当前页面刷新
       }
     })
+   
   },
 
   /**

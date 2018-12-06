@@ -1,0 +1,3 @@
+/* pages/image/image.wxss */
+
+.flex-wrp {display: flex;}
